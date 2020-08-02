@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+}
+.container {
+    border: 6px solid black;
+
+    display: flex;
+    /*display: inline-flex; //vo container ke jitna le lega size
+}*/
+    
+    /*flex-direction: row;*/ /*//left to right*/
+    /* flex-direction: row | row-reverse | (column top to bottom) | column-reverse  */
+   
+   /* flex-wrap :wrap | nowrap | wrap-reverse(vo upar chal jata heh);*/
+   
+  /* flex-direction: column;
+   height: 100px;
+   flex-wrap: wrap;
+   */
+
+   /*flex-flow: row-reverse wrap;
+   flex-flow: column-reverse wrap-reverse;
+   height: 100px;*/
+
+   justify-content: flex-start; /*at begnning*/
+   justify-content: flex-end; /*at the end*/
+   justify-content:center; /*align at center*/
+   justify-content:space-between; /*evenly spread at between*/
+   justify-content: space-around; /*there will be space at the begnning and at the end*/
+   justify-content:space-evenly;  /*will distribute the space evenly 
+}*/
+    
+    flex-direction: column; /*in vertical direction: */
+    height: 400px;
+    justify-content: flex-end;/* upar se start hoga  vertcal direction*/
+
+    height: 800px;
+    align-items: stretch; /*stretch hogs vertically*/
+    align-items: flex-start; /*ekum start mai a jayega*/
+    align-items: flex-end; /*bottom mai chala jayega*/
+    align-items: center; /*cross axis se center a jayega*/
+
+    /*//multiple contents hona chaiye and yeh cross axis ke about hota heh*/
+    align-content: stretch; /*//this is the default value*/
+    height: 800px;
+    flex-wrap: wrap;
+    align-content:flex-start; /*according to the cross axis hota heh yeh*/
+    align-content:center;   /*according to the cross axis hota heh yeh*/
+    align-content:flex-end; /*according to the cross axis hota heh yeh*/
+    align-content: space-around;
+    align-content: space-between;
+
+
+    height: 200px;
+    /*align-items: stretch; default value
+*/
+
+
+
+}
+.flex-item {
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    flex-grow: 1; /*toh sab hi grow kar jayege and space bhar dege*/
+
+    flex-shrink: 0;
+
+
+
+
+
+}
+.item-1 {
+    background-color: #B4BF35;
+    flex-basis: 200px; /* //this will increase the content width to some value*/
+
+    align-self: flex-start; /*//it will align the conetnt to start*/
+
+}
+.item-2 {
+    background-color: #B95F21;
+    align-self: flex-end;   /*align the content to bottom*/
+
+}
+.item-3 {
+    background-color: #1C4C56;
+    order:1; /*eiska mtlb vo last mai chala jayega */
+
+
+}
+.item-4 {
+    background-color: #CfB276;
+    order: 2; /*vo last mai a jyega after order: 1 ke baad*/
+    flex-shrink: 4;  /*yeh zyada shrink karega aur sab se*/
+}
+.item-5 {
+    background-color: #6B0803;
+    flex-grow: 0; /*//this is the deafult value*/
+    flex-grow: 1; /*toh jitne bhi bache hue spaces heh vo le lega  this is the relative factor*/ 
+}
+.item-6 {
+    background-color: #1C4C56;
+    align-self: auto; /*this will take the value to the stretch as per the conatiner as per the default value*/
+}
+.item-7 {
+    background-color: #B95F21;
+}
+.item-8 {
+    background-color: #01243A;
+}
+.item-9 {
+    background-color: #AAD041;
+}
